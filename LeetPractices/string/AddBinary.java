@@ -1,6 +1,12 @@
 package org.com.sonakshi.string;
 
 public class AddBinary {
+
+    /*
+    * https://leetcode.com/problems/add-binary/description/
+    * Problem No.: 67, Easy
+    * Using StringBuilder as the binary number needs to be added in a loop.
+    * */
     public static void main(String[] args) {
         addBinary("1101","1111");
     }
@@ -12,7 +18,7 @@ public class AddBinary {
         while (i>=0 || j >=0){
             sum=carry;
             if(i>=0){
-                sum = sum+a.charAt(i--)-'0';
+                sum = sum+a.charAt(i--)-'0'; // -'0' is added if a.chatAt(i) is not present
             }
             if(j>=0){
                 sum = sum+b.charAt(j--)-'0';
