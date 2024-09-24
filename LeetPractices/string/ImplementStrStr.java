@@ -8,7 +8,7 @@ public class ImplementStrStr {
     * */
 
     public static void main(String[] args) {
-        strStr("sadbutsad", "but");
+        strStr("ssslbutsad", "ssl");
     }
 
     public static int strStr(String haystack, String needle) {
@@ -23,8 +23,8 @@ public class ImplementStrStr {
                 i++;
             } else {
                 left++;
-                i = 0;
-                right = left;
+                i = 0; // re-setting the needle pointer to start
+                right = left; // to restart the check
             }
         }
         System.out.println("result: -1");
