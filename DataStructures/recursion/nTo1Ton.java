@@ -12,7 +12,8 @@ public class nTo1Ton {
             return;
         }
         System.out.println(value);
-        printN(value-1); // if you put printN(value--) this will throw Stack overflow Error
+        printN(value-1); /** if you put printN(value--) this will throw Stack overflow Error
+                                  because recursion will be called for same number*/
         System.out.println(value);
 
     }
