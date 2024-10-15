@@ -18,10 +18,7 @@ public class AlternatingDigitSum {
             n = n / 10;
             i++;
         }
-        boolean isPositive = false;
-        if(digit.length%2!=0){
-                isPositive=true;
-        }
+        boolean isPositive = digit.length % 2 != 0;
         int result = 0;
         for (int j = 0; j < digit.length ; j++) {
 
