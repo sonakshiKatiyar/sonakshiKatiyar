@@ -1,4 +1,4 @@
-package LeetPractices.sorting;
+package LeetPractices.array;
 
 public class AlternatingDigitSum {
     /**
