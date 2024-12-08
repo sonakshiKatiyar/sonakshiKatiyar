@@ -1,8 +1,16 @@
 package DataStructures.patterns;
 
 public class ButterflyStar {
+    /**
+         *    *
+         **  **
+         ******
+         ******
+         **  **
+         *    *
+     * */
     public static void main(String[] args) {
-        butterflyPattern(6);
+        butterflyPattern(3);
     }
     public static void butterflyPattern(int n){
         for (int i=1; i<=n; i++){
