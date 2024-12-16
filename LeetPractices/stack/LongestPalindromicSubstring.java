@@ -17,8 +17,8 @@ public class LongestPalindromicSubstring {
             return s;
         }
         for (int i = 0; i < s.length()-1; i++) {
-            expandRange(s, i, i);
-            expandRange(s, i, i+1);
+            expandRange(s, i, i); // if palindrome is odd
+            expandRange(s, i, i+1); // if palindrome is even
         }
         return s.substring(start, start+length);
     }
