@@ -1,6 +1,9 @@
 package LeetPractices.array;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.joining;
 
 public class ProductOfArrayExceptSelf {
 
@@ -10,9 +13,9 @@ public class ProductOfArrayExceptSelf {
      * we need to find the prefix product and suffix product and multiply both
      * To solve it in SC:O(1) we need to put the prefix product in result array and to calculate final ans we
      * will traverse from end and keep on storing the suffix product in a var .
-     * */
+     */
     public static void main(String[] args) {
-        productExceptSelf(new int[]{1,2,3,4});
+        productExceptSelf(new int[]{1, 2, 3, 4});
     }
 
     public static int[] productExceptSelf(int[] nums) {
@@ -24,15 +27,14 @@ public class ProductOfArrayExceptSelf {
             res[i] = prefix * nums[i - 1];
             prefix = res[i];
         }
-        Arrays.stream(res).forEach(a -> System.out.print(a + " "));
         prefix = nums[n - 1];
-        System.out.println();
         for (int j = n - 2; j >= 0; j--) {
-           res[j] = res[j] * prefix;
-            System.out.print(j + ":" + res[j] + " ");
+            res[j] = res[j] * prefix;
             prefix = prefix * nums[j];
-            System.out.println("prefix: "+ prefix);
         }
+        System.out.println(Arrays.stream(res)
+                .mapToObj(String::valueOf)
+                .collect(joining(",")));
         return res;
     }
 }
