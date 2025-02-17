@@ -1,6 +1,9 @@
 package DataStructures.recursion;
 
 public class Palindrome {
+    /**
+     * Functional Recursion
+     * */
     public static void main(String[] args) {
         System.out.println(isPalindrome("MADAM", 0));
     }
